@@ -453,6 +453,14 @@ double Plat_array[][2] = {{0,2}, {1,9.0902}, {2,273}, {3,5.20}, {5,195.084}, {7,
 
 EOS *Plat = new EOS("Plat", Plat_array, sizeof(Plat_array)/2/sizeof(Plat_array[0][0]));
 
+// -----------------------------------
+// EOS MgSiO3+H2O Mixture, Kovačević et al. 2022 [DOI:10.1038/s41598-022-16816-w]
+EOS *MgSiOH_Kovacevic = new EOS("MgSiOH (Kovacevic)", "./tabulated/mgsioh.txt");
+
+// -----------------------------------
+// EOS MgO+H2O Mixture, Kovačević et al. 2023 [DOI:10.1002/ctpp.202300017] 
+// (some of this is unpublished data)
+EOS *MgOH_Kovacevic = new EOS("MgOH (Kovacevic)", "./tabulated/mgoh.txt");
 
 // ============== An example on the format of dTdP function ==============
 double dTdP_gas(double P, double T)
